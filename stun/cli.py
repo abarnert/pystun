@@ -28,9 +28,9 @@ def main():
                   stun_host=options.stun_host,
                   stun_port=options.stun_port)
     nat_type, external_ip, external_port = stun.get_ip_info(**kwargs)
-    print("NAT Type: {}".format(nat_type))
-    print("External IP: {}".format(external_ip))
-    print("External Port: {}".format(external_port))
+    print("NAT Type: {0}".format(nat_type))
+    print("External IP: {0}".format(external_ip))
+    print("External Port: {0}".format(external_port))
 
 if __name__ == '__main__':
     main()

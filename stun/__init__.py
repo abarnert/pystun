@@ -90,8 +90,8 @@ ChangedAddressError = "Meet an error, when do Test1 on Changed IP and Port"
 
 def _initialize():
     global dictValToArray, dictValToMsgType
-    dictValToArray = {v: k for k, v in dictAttrToVal.items()}
-    dictValToMsgType = {v: k for k, v in dictMsgTypeToVal.items()}
+    dictValToArray = dict((v, k) for k, v in dictAttrToVal.items())
+    dictValToMsgType = dict((v, k) for k, v in dictMsgTypeToVal.items())
 
 
 def gen_tran_id():
@@ -244,9 +244,9 @@ def get_ip_info(source_ip="0.0.0.0", source_port=54320, stun_host=None,
 
 def main():
     nat_type, external_ip, external_port = get_ip_info()
-    print("NAT Type: {}".format(nat_type))
-    print("External IP: {}".format(external_ip))
-    print("External Port: {}".format(external_port))
+    print("NAT Type: {0}".format(nat_type))
+    print("External IP: {0}".format(external_ip))
+    print("External Port: {0}".format(external_port))
 
 if __name__ == '__main__':
     main()
